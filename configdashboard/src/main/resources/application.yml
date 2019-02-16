@@ -19,11 +19,11 @@ spring:
           password:
 
 ##消息中间件配置
-#rabbitmq:
-#  host: 127.0.0.1
-#  port: 5672
-#  username: guest
-#  password: guest
+rabbitmq:
+  host: 127.0.0.1
+  port: 5672
+  username: guest
+  password: guest
 
 
 #服务器配置

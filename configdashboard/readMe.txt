@@ -1,0 +1,1 @@
+rabbitmq管理界面：https://blog.csdn.net/yongche_shi/article/details/53319770
