@@ -1,6 +1,3 @@
-server:
-  port: 9020
-
 #spring配置
 spring:
   #云配置
