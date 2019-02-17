@@ -16,6 +16,12 @@ spring:
   application:
     #名称: api网关服务
     name: api-gateway
+  # 链路追踪
+  zipkin:
+    base-url: http://localhost:9050
+  sleuth:
+    sampler:
+      percentage: 1.0
 
 #API网关配置
 zuul:

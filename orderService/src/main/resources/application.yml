@@ -9,6 +9,12 @@ spring:
       trace:
         #开启消息跟踪
         enabled: true
+  # 链路追踪
+  zipkin:
+    base-url: http://localhost:9050
+  sleuth:
+    sampler:
+      percentage: 1.0
 
 #服务器配置
 server:
@@ -32,3 +38,4 @@ security:
       #指定用户信息地址
       user-info-uri: http://localhost:9030/auth/user
       prefer-token-info: false
+
