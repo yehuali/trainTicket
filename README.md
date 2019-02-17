@@ -18,6 +18,14 @@
        + 主要功能：通过API网关调用OAuth2服务器来过滤用户的请求，保证对外服务的安全性   
      + OAuth2认证授权服务（authserver）<br>
       ![认证授权](https://upload-images.jianshu.io/upload_images/5624515-eca0e75f2e23651a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/661/format/webp)      
+     + 分布式服务跟踪
+       + 分布式服务跟踪系统主要有三部分：数据收集、数据存储和数据展示
+          + 数据存储可分为实时数据和全量数据两部分，实时数据用于故障排查,全量数据用于系统优化
+          + 数据收集除了支持平台无关和开发语言无关系统的数据收集，还包括异步数据收集（需要跟踪队列中的消息，保证调用的连贯性）
+          + 数据展示又涉及到数据挖掘和分析
+       + trace：服务追踪的追踪单元是从客户发起请求（request）抵达被追踪系统的边界开始，到被追踪系统向客户返回响应（response）为止的过程
+       + 每个trace中会调用若干个服务，在每次调用服务时，埋入一个调用记录，称为一个“span”
+      ![分布式服务跟踪](http://daixiaoyu.com/images/distributed-tracing/dt003.png)  
 ## 环境安装
   + [rabbitMq官网](https://www.rabbitmq.com/)
     + [rabbitMq管理界面](https://blog.csdn.net/yongche_shi/article/details/53319770)
@@ -27,3 +35,4 @@
 
 ## 参考资料
   + 蓝士钦的springcloud系列：https://www.jianshu.com/u/082f73dac819
+  + [分布式服务跟踪及Spring Cloud的实现](http://daixiaoyu.com/distributed-tracing.html)
